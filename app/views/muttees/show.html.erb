@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @muttee.title %>
+</p>
+
+<p>
+  <strong>Mutter:</strong>
+  <%= @muttee.mutter %>
+</p>
+
+<%= link_to 'Edit', edit_muttee_path(@muttee) %> |
+<%= link_to 'Back', muttees_path %>

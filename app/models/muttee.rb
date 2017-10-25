@@ -1,0 +1,2 @@
+class Muttee < ApplicationRecord
+end

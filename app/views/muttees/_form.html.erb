@@ -1,0 +1,27 @@
+<%= form_with(model: muttee, local: true) do |form| %>
+  <% if muttee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(muttee.errors.count, "error") %> prohibited this muttee from being saved:</h2>
+
+      <ul>
+      <% muttee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :muttee_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mutter %>
+    <%= form.text_field :mutter, id: :muttee_mutter %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
